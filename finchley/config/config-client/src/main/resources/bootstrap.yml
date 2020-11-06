@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master #指明远程仓库的分支
+      profile: dev  #dev开发版本
+      discovery:
+        enabled: true
+        serviceId: CONFIG-SERVER #配置服务中心
+
+server:
+  port: 8881
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+
